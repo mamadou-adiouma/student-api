@@ -1,10 +1,7 @@
 # student-api
 
 # Modification apportée dans le fichier README.md 
-# # 2e - Modification apportée dans le fichier README.md 
-# # 3e - Modification apportée dans le fichier README.md 
-# # 4e - Modification apportée dans le fichier README.md 
-# # 5e - Modification apportée dans le fichier README.md 
+# BUG FIXED !
 
 API REST Spring Boot pour la gestion d'étudiants — TP Intégration Continue avec Jenkins.
 
