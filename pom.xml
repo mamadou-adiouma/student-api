@@ -56,6 +56,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!-- 1. Ajoutez la dépendance Checkstyle dans le pom.xml (plugin :
+maven-checkstyle-plugin). -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.9</version>
+            </plugin>
 
             <!-- JaCoCo : couverture de code (seuil 70 %) -->
             <plugin>

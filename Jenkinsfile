@@ -16,6 +16,13 @@ pipeline {
                 bat 'mvn clean package -DskipTests'
             }
         }
+        // * 2. Insérez le stage suivant entre Build et Tests Unitaires dans le Jenkinsfile :
+        stage ( ’ Lint ’) {
+        steps {
+        bat ’ mvn checkstyle : check ’
+        }
+        }
+
         stage('Tests Unitaires') {
             steps {
                 bat 'mvn test'
