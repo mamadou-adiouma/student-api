@@ -19,7 +19,7 @@ pipeline {
         // * 2. Insérez le stage suivant entre Build et Tests Unitaires dans le Jenkinsfile :
         stage ('Lint') {
         steps {
-        bat ’ mvn checkstyle : check ’
+        bat 'mvn checkstyle : check'
         }
         }
 
