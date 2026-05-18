@@ -1,9 +1,17 @@
 package sn.uvs.studentapi.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+// import org.springframework.web.bind.annotation.*;
 import sn.uvs.studentapi.model.Student;
 import sn.uvs.studentapi.service.StudentService;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -17,7 +25,12 @@ public class StudentController {
 
     private final StudentService service;
 
-    public StudentController(StudentService service) {
+    /**
+     * Constructeur pour injecter le service étudiant.
+     * 
+     * @param service le service utilisé par ce contrôleur
+     */
+    public StudentController(final StudentService service) {
         this.service = service;
     }
 
