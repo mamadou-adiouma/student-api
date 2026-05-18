@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Application principale pour l'API de gestion des étudiants.
  */
 @SpringBootApplication
-public class StudentApiApplication {
+public final class StudentApiApplication {
 
     /**
      * Constructeur privé masqué pour empêcher l'instanciation de la classe
