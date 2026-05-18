@@ -99,7 +99,21 @@ maven-checkstyle-plugin). -->
                             </rules>
                         </configuration>
                     </execution>
-        </executions>
+            </executions>
+                    <dependencies>
+                        <!-- Pointer vers la dépendance. -->
+                        <dependency>
+                            <groupId>
+                                com.puppycrawl.tools
+                            </groupId>
+                            <artifactId>
+                                checkstyle
+                            </artifactId>
+                            <version>
+                                10.17.0
+                            </version>
+                        </dependency>
+                    </dependencies>
             </plugin>
         </plugins>
     </build>
