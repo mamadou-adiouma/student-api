@@ -1,41 +1,144 @@
 package sn.uvs.studentapi.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
+/**
+ * Représente l'entité Étudiant.
+ */
 @Entity
 @Table(name = "students")
 public class Student {
 
+    /** L'identifiant unique de l'étudiant. */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /** Le nom de l'étudiant. */
     private String nom;
+
+    /** Le prénom de l'étudiant. */
     private String prenom;
+
+    /** L'adresse email de l'étudiant. */
     private String email;
+
+    /** La moyenne académique de l'étudiant. */
     private Double moyenne;
 
-    public Student() {}
-
-    public Student(String nom, String prenom, String email, Double moyenne) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.email = email;
-        this.moyenne = moyenne;
+    /**
+     * Constructeur par défaut.
+     */
+    public Student() {
     }
 
-    public Long getId()              { return id; }
-    public void setId(Long id)       { this.id = id; }
+    /**
+     * Constructeur complet.
+     *
+     * @param finalNom     le nom de l'étudiant
+     * @param finalPrenom  le prénom de l'étudiant
+     * @param finalEmail   l'email de l'étudiant
+     * @param finalMoyenne la moyenne de l'étudiant
+     */
+    public Student(final String finalNom, final String finalPrenom,
+            final String finalEmail, final Double finalMoyenne) {
+        this.nom = finalNom;
+        this.prenom = finalPrenom;
+        this.email = finalEmail;
+        this.moyenne = finalMoyenne;
+    }
 
-    public String getNom()           { return nom; }
-    public void setNom(String nom)   { this.nom = nom; }
+    /**
+     * Récupère l'identifiant.
+     *
+     * @return l'id
+     */
+    public Long getId() {
+        return id;
+    }
 
-    public String getPrenom()              { return prenom; }
-    public void setPrenom(String prenom)   { this.prenom = prenom; }
+    /**
+     * Définit l'identifiant.
+     *
+     * @param finalId le nouvel id
+     */
+    public void setId(final Long finalId) {
+        this.id = finalId;
+    }
 
-    public String getEmail()               { return email; }
-    public void setEmail(String email)     { this.email = email; }
+    /**
+     * Récupère le nom.
+     *
+     * @return le nom
+     */
+    public String getNom() {
+        return nom;
+    }
 
-    public Double getMoyenne()             { return moyenne; }
-    public void setMoyenne(Double moyenne) { this.moyenne = moyenne; }
+    /**
+     * Définit le nom.
+     *
+     * @param finalNom le nouveau nom
+     */
+    public void setNom(final String finalNom) {
+        this.nom = finalNom;
+    }
+
+    /**
+     * Récupère le prénom.
+     *
+     * @return le prénom
+     */
+    public String getPrenom() {
+        return prenom;
+    }
+
+    /**
+     * Définit le prénom.
+     *
+     * @param finalPrenom le nouveau prénom
+     */
+    public void setPrenom(final String finalPrenom) {
+        this.prenom = finalPrenom;
+    }
+
+    /**
+     * Récupère l'email.
+     *
+     * @return l'email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Définit l'email.
+     *
+     * @param finalEmail le nouvel email
+     */
+    public void setEmail(final String finalEmail) {
+        this.email = finalEmail;
+    }
+
+    /**
+     * Récupère la moyenne.
+     *
+     * @return la moyenne
+     */
+    public Double getMoyenne() {
+        return moyenne;
+    }
+
+    /**
+     * Définit la moyenne.
+     *
+     * @param finalMoyenne la nouvelle moyenne
+     */
+    public void setMoyenne(final Double finalMoyenne) {
+        this.moyenne = finalMoyenne;
+    }
 }
