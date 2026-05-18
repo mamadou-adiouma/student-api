@@ -31,9 +31,9 @@ class StudentServiceTest {
         List<Student> result = service.findAll();
 
         // Avant
-        // assertEquals(1, result.size());
+        assertEquals(1, result.size());
         // Apres ( assertion incorrecte volontairement )
-        assertEquals(99, result.size());
+        // assertEquals(99, result.size());
 
         verify(repository).findAll();
     }
