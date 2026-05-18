@@ -11,6 +11,10 @@ import java.util.List;
 @RequestMapping("/api/students")
 public class StudentController {
 
+    /**
+     * Service utilisé pour les opérations métier sur les étudiants.
+     */
+
     private final StudentService service;
 
     public StudentController(StudentService service) {
