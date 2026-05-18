@@ -55,9 +55,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <!-- 1. Ajoutez la dépendance Checkstyle dans le pom.xml (plugin :
-maven-checkstyle-plugin). -->
+        </plugin>
             <plugin>
                 <groupId>
                     org.apache.maven.plugins
