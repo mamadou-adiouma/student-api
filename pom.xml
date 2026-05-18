@@ -63,7 +63,9 @@ maven-checkstyle-plugin). -->
                     org.apache.maven.plugins
                 </groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.9.15</version>
+                <version>
+                    3.6
+                </version>
             </plugin>
 
             <!-- JaCoCo : couverture de code (seuil 70 %) -->
@@ -97,21 +99,7 @@ maven-checkstyle-plugin). -->
                             </rules>
                         </configuration>
                     </execution>
-                </executions>
-                    <dependencies>
-                        <!-- Pointer vers la dépendance. -->
-                        <dependency>
-                            <groupId>
-                                com.puppycrawl.tools
-                            </groupId>
-                            <artifactId>
-                                checkstyle
-                            </artifactId>
-                            <version>
-                                10.17.0
-                            </version>
-                        </dependency>
-                    </dependencies>
+        </executions>
             </plugin>
         </plugins>
     </build>
