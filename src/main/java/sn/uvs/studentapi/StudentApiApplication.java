@@ -7,14 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Application principale pour l'API de gestion des étudiants.
  */
 @SpringBootApplication
-public final class StudentApiApplication {
+public class StudentApiApplication {
 
     /**
-     * Constructeur privé masqué pour empêcher l'instanciation de la classe
-     * utilitaire.
+     * Constructeur public par défaut explicite.
+     * Requis par Spring pour l'instanciation de la configuration,
+     * et évite que Checkstyle considère cette classe comme une classe utilitaire.
      */
-    private StudentApiApplication() {
-        // Empêche l'instanciation directe
+    public StudentApiApplication() {
+        super();
     }
 
     /**

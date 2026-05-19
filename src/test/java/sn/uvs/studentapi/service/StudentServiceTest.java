@@ -32,6 +32,7 @@ class StudentServiceTest {
 
         // Avant
         assertEquals(1, result.size());
+
         // Apres ( assertion incorrecte volontairement )
         // assertEquals(99, result.size());
 
