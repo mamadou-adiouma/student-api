@@ -10,9 +10,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StudentApiApplication {
 
     /**
-     * Constructeur public par défaut explicite.
-     * Requis par Spring pour l'instanciation de la configuration,
-     * et évite que Checkstyle considère cette classe comme une classe utilitaire.
+     * Variable d'instance non-statique pour indiquer à Checkstyle
+     * que cette classe n'est pas une simple classe utilitaire.
+     */
+    @SuppressWarnings("unused")
+    private final boolean isSpringConfig = true;
+
+    /**
+     * Constructeur public requis par Spring Boot.
      */
     public StudentApiApplication() {
         super();
